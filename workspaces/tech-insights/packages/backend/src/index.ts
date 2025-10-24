@@ -31,6 +31,9 @@ const backend = createBackend();
 backend.add(import('@backstage/plugin-app-backend'));
 backend.add(import('@backstage/plugin-proxy-backend'));
 backend.add(import('@backstage/plugin-scaffolder-backend'));
+backend.add(
+  import('@backstage/plugin-scaffolder-backend-module-notifications'),
+);
 backend.add(import('@backstage/plugin-techdocs-backend'));
 
 // auth plugin
@@ -55,6 +58,10 @@ backend.add(
 backend.add(import('@backstage/plugin-search-backend'));
 backend.add(import('@backstage/plugin-search-backend-module-catalog'));
 backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
+
+// notifications and signals plugins
+backend.add(import('@backstage/plugin-notifications-backend'));
+backend.add(import('@backstage/plugin-signals-backend'));
 
 // Tech insights
 backend.add(import('@backstage-community/plugin-tech-insights-backend'));
